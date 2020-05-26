@@ -82,6 +82,9 @@ public class SelectionOverview extends VBox {
             public void handle(ActionEvent event) {
                 getSelection();
                 //TODO switch to study, use selectedItems as param type ObservableList<VocabularySelectionModel>
+                StudyInterface studyInterface = new StudyInterface(vocab);
+                getScene().setRoot(studyInterface);
+
             }
         });
         train_btn.setOnAction(new EventHandler<ActionEvent>() {
